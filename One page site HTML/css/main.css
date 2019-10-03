@@ -1,0 +1,259 @@
+body{
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #222222
+}
+
+.clearfix:after{ /*  решаем проблему с заголовком? чтобы он не становился между двумя элемпентами как логготип и меню  */
+  content: '';     /*чтобы отобразился псевдо элемент after на странице*/
+  display: table;/*чтобы корректно отображался в современных и старых браузерах*/
+  width: 100%;
+  clear: both; /*сброс обтекания, очистка потоков обтекания float: left*/
+}
+
+div{
+  box-sizing: border-box;
+}
+header{
+  background: url(../img/first-bg.jpg) no-repeat center top / cover;
+  /*padding-bottom: 420px;*/
+  height: 100vh;
+}
+
+.container{
+  width: 930px;
+  margin: 0 auto;
+}
+
+.logo{
+  margin-top: 41px;
+  float: left; /* поставили логотип у левого края контейнера */
+}
+
+nav{
+  float: right;/* поставили Меню списка элементов  у правого края контейнера */
+  margin-top: 50px;
+}
+
+.menu{
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.menu li{
+  float: left;
+  display: block;
+  margin-right: 41px;
+}
+
+.menu a{
+  color: #fff;
+  text-decoration: none;/*убрали поддчеркивание ссылки*/
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.titles_first{
+  color: #fff;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 180px;
+}
+
+h1{
+  color: #fff;
+  font-size: 75px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 15px;;
+}
+
+.button{
+  background: #fed136;
+  color: #484543;
+  border-radius: 3px;
+  display: block;
+  width: 240px;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+.title{
+padding-top: 115px;
+margin-left: 50px;
+}
+
+.title h2{
+font-size: 40px;
+font-weight: bold;
+text-align: center;
+text-transform: uppercase;
+margin: 0;
+}
+
+.title p{
+color: #777777;
+text-align: center;
+font-size: 16px;
+margin-top: 5px;
+}
+
+.services{
+margin-top: 50px;
+}
+
+.services_item{
+  width: 270px;
+  float: left;
+  text-align: center;
+}
+
+.services_item h3{
+font-size: 18px;
+margin-bottom: 5px;
+}
+
+.services_item p{
+  font-size: 14px;
+  color: #777777;
+  line-height: 1.55em;
+}
+
+.services_item:last-child{ /* для иконок    */
+  float: right;
+}
+.services_item:nth-child(2){
+  margin-left: 60px;
+}
+#services{
+  padding-bottom: 120px;
+}
+
+#portfolio{
+  background: #f7f7f7;
+  padding-bottom: 120px;
+}
+
+.works{
+  margin-top: 70px;
+}
+.works img{
+  float: left;
+}
+
+.works img:last-child{
+  float: right;
+}
+
+.works img:nth-child(2){
+  margin-left: 29px;
+}
+
+/*
+  <!--..............................................................
+
+    ABOUT US
+
+................................................................-->
+
+*/
+
+.about_item{
+ margin-right: 320px;
+ margin-top: 81px;
+ display: flex;
+ justify-content: center;
+
+}
+
+.text{
+  width: 295px;
+  text-align: right;
+ /* float: left;*/
+  margin-right: 40px;
+}
+.about_img{
+ display: block;
+  
+}
+.text h3{
+text-transform: uppercase;
+margin:0;
+padding: 0;
+font-size: 18px;
+}
+.text h2{
+font-weight: bold;
+margin: 8px 0 0 0;
+padding: 0;
+font-size: 18px;
+}
+
+.text p{
+  color: #777777;
+font-size: 16px;
+margin-top: 21px;
+}
+
+
+
+.about_item1{
+ margin-top: 81px;
+ display: flex;
+ justify-content: center;
+ margin-right: 40px;
+}
+
+.text1{
+  width: 295px;
+  text-align: left;
+  /*float: right; */
+  margin-right: 0; 
+}
+
+.text1 h3{
+text-transform: uppercase;
+margin:0;
+padding: 0;
+font-size: 18px;
+}
+.text1 h2{
+font-weight: bold;
+margin: 8px 0 0 0;
+padding: 0;
+font-size: 18px;
+}
+
+.text1 p{
+  color: #777777;
+font-size: 16px;
+margin-top: 21px;
+}
+
+.about_img1{
+ display: block;
+ margin-left: 375px;
+ float: left;
+ margin-right: 40px;
+}
+
+
+/* FOOTER */
+
+.footer_item p{
+  color: #777777;
+font-size: 16px;
+margin-top: 21px;
+text-align: center;
+margin-top: 120px;
+margin-bottom: 90px;
+}

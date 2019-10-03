@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Speed Scrubber</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <video class="flex" width="765" height="430" src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" loop controls></video>
+    <p>
+    <div class="speed">
+      <div class="speed-bar">1×</div>
+    </div>
+  </div>
+
+<script>
+  const speed = document.querySelector('.speed');
+  const bar = speed.querySelector('.speed-bar');
+  const video = document.querySelector('.flex');
+
+  function handleMove(e) {
+    /* нам нужно получить, где, как это будет ноль пикселей */
+      const y = e.pageY - this.offsetTop; /* позиция в пикселях левого верхнего угла блока, относительно его  offsetParent – «родитель   
+                                              по дереву рендеринга» – ближайшая ячейка таблицы, */
+      console.log(y);
+      const percent = y / this.offsetHeight; /*Y делим на эту высоту смещения точки - получаем фактическую высоту которая у нас есть*/
+      console.log(percent);
+      const min = 0.4;
+      const max = 4;
+      const height = Math.round(percent * 100) + '%'; /* получили высоту в процентах*/
+      console.log(height);
+      const playbackRate = percent * (max - min) + min; /* скорость воспроизведения.  При высоте 0% он должен быть 0,4x, а при высоте 
+                                                        100% - 4x */
+      bar.style.height = height; /* приявязали высоту к статус бару */
+      bar.textContent = playbackRate.toFixed(2) + '×';
+      video.playbackRate = playbackRate; /* привязываем значения к скорости воспроизведения видео*/
+    }
+
+  speed.addEventListener('mousemove', handleMove);
+
+</script>
+</body>
+</html>
+
+
+<!-- работа с событиями перемещения мыши и вторая работа с HTML5-видео.   -->
